@@ -1,0 +1,13 @@
+extends:
+- semistandard
+rules:
+  strict:
+  - error
+  - safe
+  max-len:
+  - error
+  - code: 80
+    ignoreComments: true
+    ignoreStrings: true
+    ignoreTemplateLiterals: true
+    ignoreRegExpLiterals: true

@@ -1,0 +1,69 @@
+{
+  "name": "the-color-of-air",
+  "version": "0.0.0",
+  "description": "A color spectrum representing air temperature",
+  "homepage": "https://github.com/boneskull/the-color-of-air",
+  "author": {
+    "name": "Christopher Hiller",
+    "email": "boneskull@boneskull.com",
+    "url": "https://boneskull.com"
+  },
+  "main": "dist/the-color-of-air.js",
+  "module": "src/index.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "air",
+    "color",
+    "temperature",
+    "weather",
+    "fahrenheit",
+    "celsius",
+    "centigrade",
+    "degrees",
+    "heat",
+    "cold",
+    "cool",
+    "warm",
+    "rainbow",
+    "spectrum",
+    "spectra",
+    "weather-map",
+    "map",
+    "forecast"
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.2.0",
+    "babel-register": "^6.23.0",
+    "eslint": "^3.17.0",
+    "eslint-config-semistandard": "^8.0.0",
+    "eslint-config-standard": "^7.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1",
+    "lodash.range": "^3.2.0",
+    "mocha": "^3.2.0",
+    "unexpected": "^10.26.3",
+    "webpack": "^2.3.2"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "license": "Apache-2.0",
+  "scripts": {
+    "lint": "eslint '*.js' src test --fix",
+    "pretest": "npm run lint",
+    "build": "webpack",
+    "build:watch": "webpack --watch",
+    "test": "mocha --require babel-register",
+    "preversion": "npm test",
+    "prepublish": "npm run build"
+  },
+  "dependencies": {}
+}
