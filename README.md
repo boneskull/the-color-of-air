@@ -41,6 +41,26 @@ colorList[2]; // #a496c0 "amethyst smoke"
 
 These colors are pulled from [AccuWeather](http://www.accuweather.com/)'s radar maps.
 
+The color list is as follows, from "coldest" to "hottest":
+
+```json
+[
+  "#feffff",
+  "#d1c9df",
+  "#a496c0",
+  "#3993ce",
+  "#0772b8",
+  "#03902b",
+  "#2dc558",
+  "#fecf3b",
+  "#ec9800",
+  "#dd531e",
+  "#c53600",
+  "#b10909",
+  "#6f0015"
+]
+```
+
 ## License
 
 Copyright 2017, [Christopher Hiller](https://boneskull.com).  Licensed Apache-2.0.
