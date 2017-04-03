@@ -42,6 +42,7 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.2.0",
     "babel-register": "^6.23.0",
+    "babili-webpack-plugin": "^0.0.11",
     "eslint": "^3.17.0",
     "eslint-config-semistandard": "^8.0.0",
     "eslint-config-standard": "^7.0.0",
@@ -49,21 +50,25 @@
     "eslint-plugin-standard": "^2.1.1",
     "lodash.range": "^3.2.0",
     "mocha": "^3.2.0",
+    "rimraf": "^2.6.1",
     "unexpected": "^10.26.3",
-    "webpack": "^2.3.2"
+    "webpack": "^2.3.2",
+    "webpack-merge": "^4.1.0"
   },
   "engines": {
     "node": ">=4"
   },
   "license": "Apache-2.0",
   "scripts": {
-    "lint": "eslint '*.js' src test --fix",
-    "pretest": "npm run lint",
     "build": "webpack",
     "build:watch": "webpack --watch",
-    "test": "mocha --require babel-register",
+    "clean": "rimraf dist",
+    "lint": "eslint '*.js' src test --fix",
+    "prepare": "npm run clean && npm run build",
+    "pretest": "npm run lint",
     "preversion": "npm test",
-    "prepublish": "npm run build"
+    "test": "mocha --require babel-register"
   },
+  "browser": "dist/the-color-of-air.min.js",
   "dependencies": {}
 }
