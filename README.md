@@ -1,5 +1,7 @@
 # the-color-of-air
 
+[![Build Status](https://travis-ci.org/boneskull/the-color-of-air.svg?branch=master)](https://travis-ci.org/boneskull/the-color-of-air)
+
 > A color spectrum representing air temperature
 
 ## Summary
