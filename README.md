@@ -8,17 +8,27 @@
 
 Provides a function which returns a reasonable color (in CSS hex format) for the relative air temperature.
 
+For Node.js & browsers.
+
 ## Install
+
+## Yarn (preferred)
+
+```shell
+$ yarn add the-color-of-air
+```
+
+## npm
 
 ```shell
 $ npm install the-color-of-air --save
 ```
 
-This module has no production dependencies.
- 
-It should work in relatively modern browsers.
-
 ## Usage
+
+This library is exported as a UMD bundle.
+
+### ES2015+
 
 ```js
 import {colorOfAir} from 'the-color-of-air';
@@ -34,34 +44,41 @@ colorOfAir('c', 27); // #c53600 "mahogany"
 const colorOfFahrenheit = colorOfAir('f');
 colorOfFahrenheit(0); // #d1c9df "languid lavender"
 
-// get at raw list
+// raw array
 import {colorList} from 'the-color-of-air';
 colorList[2]; // #a496c0 "amethyst smoke"
 ```
 
+## Node.js
+
+```js
+const {colorOfAir} = require('the-color-of-air');
+// etc
+```
+
+## Browser
+
+```html
+<!-- latest minified version -->
+<script src="https://unpkg.com/the-color-of-air"></script>
+
+<script>
+(function () {
+  const colorOfAir = window['the-color-of-air'].colorOfAir;
+  // etc
+}());
+</script>
+```
+
+## Swatches
+
+Swatches in various formats are available in the [swatches/](https://github.com/boneskull/the-color-of-air/tree/master/swatches) directory.
+
+These files are *not* published to the npm registry.
+
 ## Notes
 
 These colors are pulled from [AccuWeather](http://www.accuweather.com/)'s radar maps.
-
-The color list is as follows, from "coldest" to "hottest":
-
-```json
-[
-  "#feffff",
-  "#d1c9df",
-  "#a496c0",
-  "#3993ce",
-  "#0772b8",
-  "#03902b",
-  "#2dc558",
-  "#fecf3b",
-  "#ec9800",
-  "#dd531e",
-  "#c53600",
-  "#b10909",
-  "#6f0015"
-]
-```
 
 ## License
 
