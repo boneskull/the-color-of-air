@@ -1,6 +1,6 @@
-# the-color-of-air
+# the-color-of-air [![Build Status](https://travis-ci.org/boneskull/the-color-of-air.svg?branch=master)](https://travis-ci.org/boneskull/the-color-of-air)
 
-[![Build Status](https://travis-ci.org/boneskull/the-color-of-air.svg?branch=master)](https://travis-ci.org/boneskull/the-color-of-air)
+<img src="https://cldup.com/-1AEd2IfBy.png" title="swatches" alt="swatches" width="586" height="46"/>
 
 > A color spectrum representing air temperature
 
