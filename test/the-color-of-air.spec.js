@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 
 import range from 'lodash.range';
-import {colorOfAir, colorList} from '../src';
+import {colorOfAir, colorList, scales} from '../src';
 import expect from 'unexpected';
 
 describe('the-color-of-air', function () {
@@ -26,7 +26,7 @@ describe('the-color-of-air', function () {
 
     describe('fahrenheit behavior', function () {
       const colorF = colorOfAir('f');
-      range(-10, 107, 9)
+      range(scales.f.min, scales.f.max, 9)
         .forEach((temp, idx) => {
           it(
             `should return "${colorList[idx]}" for degrees fahrenheit "${temp}"`,
@@ -38,7 +38,7 @@ describe('the-color-of-air', function () {
 
     describe('celsius behavior', function () {
       const colorC = colorOfAir('c');
-      range(-23, 42, 5)
+      range(scales.c.min, scales.c.max, 5)
         .forEach((temp, idx) => {
           it(`should return "${colorList[idx]}" for degrees celsius "${temp}"`,
             function () {
